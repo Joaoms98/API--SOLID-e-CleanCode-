@@ -17,7 +17,8 @@ namespace APIEstudos.Interfaces.Repositories
             await _context.Users.AddAsync(new UserModel
             {
                 Name = user.Name,
-                Email = user.Email
+                Email = user.Email,
+                Date = user.Date
             });
             await _context.SaveChangesAsync();
         }
