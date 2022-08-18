@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X52Ie2VTazjAxMC3es1v2GDw9/E+GIouyqo++vcBCs1+MlfPfxYXZH+yawgncaGqJjSpW0LY21SOUSaKNISzcA==",
+  "dgSpecHash": "Mia66hsiXlEufrx7Syqg0yki57PhfeJtiQIbzFH/DkNr2I+8zC/VKTGJue66EO8MPl6zfGxX3Mv9N92dkZbgsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jvm18\\Desktop\\APIEstudos\\APIEstudos.csproj",
+  "projectFilePath": "C:\\Users\\jvm18\\Desktop\\prograhmaisaoção\\API-SOLID-CleanCode\\APIEstudos\\APIEstudos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jvm18\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\jvm18\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

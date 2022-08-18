@@ -2203,11 +2203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jvm18\\Desktop\\APIEstudos\\APIEstudos.csproj",
+      "projectUniqueName": "C:\\Users\\jvm18\\Desktop\\prograhmaisaoção\\API-SOLID-CleanCode\\APIEstudos\\APIEstudos.csproj",
       "projectName": "APIEstudos",
-      "projectPath": "C:\\Users\\jvm18\\Desktop\\APIEstudos\\APIEstudos.csproj",
+      "projectPath": "C:\\Users\\jvm18\\Desktop\\prograhmaisaoção\\API-SOLID-CleanCode\\APIEstudos\\APIEstudos.csproj",
       "packagesPath": "C:\\Users\\jvm18\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jvm18\\Desktop\\APIEstudos\\obj\\",
+      "outputPath": "C:\\Users\\jvm18\\Desktop\\prograhmaisaoção\\API-SOLID-CleanCode\\APIEstudos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jvm18\\AppData\\Roaming\\NuGet\\NuGet.Config",
