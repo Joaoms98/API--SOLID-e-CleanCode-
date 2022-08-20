@@ -1,0 +1,9 @@
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.csproj.AssemblyReference.cache
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.GeneratedMSBuildEditorConfig.editorconfig
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.AssemblyInfoInputs.cache
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.AssemblyInfo.cs
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.csproj.CoreCompileInputs.cache
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.MvcApplicationPartsAssemblyInfo.cache
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.RazorAssemblyInfo.cache
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.RazorAssemblyInfo.cs
+/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/Debug/net6.0/APIEstudos.APISite.MvcApplicationPartsAssemblyInfo.cs

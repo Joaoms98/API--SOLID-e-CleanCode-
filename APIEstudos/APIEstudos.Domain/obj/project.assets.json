@@ -1870,34 +1870,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jvm18\\.nuget\\packages\\": {}
+    "/home/novahaus/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jvm18\\Desktop\\Api\\APIEstudos\\APIEstudos.Domain\\APIEstudos.Domain.csproj",
+      "projectUniqueName": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj",
       "projectName": "APIEstudos.Domain",
-      "projectPath": "C:\\Users\\jvm18\\Desktop\\Api\\APIEstudos\\APIEstudos.Domain\\APIEstudos.Domain.csproj",
-      "packagesPath": "C:\\Users\\jvm18\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jvm18\\Desktop\\Api\\APIEstudos\\APIEstudos.Domain\\obj\\",
+      "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj",
+      "packagesPath": "/home/novahaus/.nuget/packages/",
+      "outputPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jvm18\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/novahaus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jvm18\\Desktop\\Api\\APIEstudos\\APIEstudos.Infrastructure\\APIEstudos.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\jvm18\\Desktop\\Api\\APIEstudos\\APIEstudos.Infrastructure\\APIEstudos.Infrastructure.csproj"
+            "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj": {
+              "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj"
             }
           }
         }
@@ -1936,7 +1934,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.108/sdk/6.0.108/RuntimeIdentifierGraph.json"
       }
     }
   }
