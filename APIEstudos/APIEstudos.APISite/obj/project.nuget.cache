@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "87Oblv1pG93jWMBmbwKIMVC+4WaKBXKo5B5kvrSynC1sXai1hGY5EjHhreKHM2vWWXvWjOcu6uby5g+xkbaqDg==",
+  "dgSpecHash": "ExDSuv9DpUtBXbJl5/IexKAWzNwRExN3c/4zqY9IAiyMSPTzlWXnFgw7M/rNkO4nGeooGteC8kz6n/bxhILc8A==",
   "success": true,
-  "projectFilePath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/APIEstudos.APISite.csproj",
+  "projectFilePath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/APIEstudos.APISite.csproj",
   "expectedPackageFiles": [
     "/home/novahaus/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/home/novahaus/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

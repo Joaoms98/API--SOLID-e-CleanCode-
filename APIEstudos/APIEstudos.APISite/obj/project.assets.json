@@ -765,6 +765,21 @@
           }
         }
       },
+      "APIEstudos.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "APIEstudos.Infrastructure": "1.0.0",
+          "AutoMapper": "11.0.1",
+          "MediatR": "10.0.1"
+        },
+        "compile": {
+          "bin/placeholder/APIEstudos.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIEstudos.Domain.dll": {}
+        }
+      },
       "APIEstudos.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2198,6 +2213,11 @@
         "version.txt"
       ]
     },
+    "APIEstudos.Domain/1.0.0": {
+      "type": "project",
+      "path": "../APIEstudos.Domain/APIEstudos.Domain.csproj",
+      "msbuildProject": "../APIEstudos.Domain/APIEstudos.Domain.csproj"
+    },
     "APIEstudos.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
@@ -2206,6 +2226,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "APIEstudos.Domain >= 1.0.0",
       "APIEstudos.Infrastructure >= 1.0.0",
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
@@ -2223,11 +2244,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/APIEstudos.APISite.csproj",
+      "projectUniqueName": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/APIEstudos.APISite.csproj",
       "projectName": "APIEstudos.APISite",
-      "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/APIEstudos.APISite.csproj",
+      "projectPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/APIEstudos.APISite.csproj",
       "packagesPath": "/home/novahaus/.nuget/packages/",
-      "outputPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/",
+      "outputPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/novahaus/.nuget/NuGet/NuGet.Config"
@@ -2242,8 +2263,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj": {
-              "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj"
+            "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj": {
+              "projectPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj"
+            },
+            "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj": {
+              "projectPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj"
             }
           }
         }

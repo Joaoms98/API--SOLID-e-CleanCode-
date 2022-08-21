@@ -10,3 +10,15 @@
 /home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.dll
 /home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/ref/APIEstudos.Infrastructure.dll
 /home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.pdb
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/bin/Debug/net6.0/APIEstudos.Infrastructure.deps.json
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/bin/Debug/net6.0/APIEstudos.Infrastructure.dll
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/bin/Debug/net6.0/ref/APIEstudos.Infrastructure.dll
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/bin/Debug/net6.0/APIEstudos.Infrastructure.pdb
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.csproj.AssemblyReference.cache
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.AssemblyInfoInputs.cache
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.AssemblyInfo.cs
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.csproj.CoreCompileInputs.cache
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.dll
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/ref/APIEstudos.Infrastructure.dll
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.pdb

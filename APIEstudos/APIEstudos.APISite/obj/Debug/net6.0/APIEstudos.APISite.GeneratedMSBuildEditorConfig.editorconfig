@@ -8,37 +8,37 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = APIEstudos.APISite
 build_property.RootNamespace = APIEstudos.APISite
-build_property.ProjectDir = /home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/
+build_property.ProjectDir = /home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite
+build_property.MSBuildProjectDirectory = /home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Error.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Index.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Privacy.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/_ViewImports.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/_ViewStart.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Shared/_Layout.cshtml]
+[/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.APISite/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7j2wur0qqs

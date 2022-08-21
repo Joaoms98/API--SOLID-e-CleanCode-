@@ -23,7 +23,7 @@
 
 <ItemGroup>
   <ProjectReference Include="..\APIEstudos.Infrastructure\APIEstudos.Infrastructure.csproj" />
-  <ProjectReference Include="..\APIEstudos.Infrastructure\APIEstudos.Infrastructure.csproj" /> 
+  <ProjectReference Include="..\APIEstudos.Domain\APIEstudos.Domain.csproj" /> 
 </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NYww4nr+Tq6nGztZfstRnIn63kc3DMHXHalvFOypub0cIkN9nGIUP45w0dvuQMUwWa5Ilw0sDgrkWB64O47yiA==",
+  "dgSpecHash": "YexmXuXbiS69PxHvw37IUxsEqXjXta+EUxR5WzSM+xGQ+sWvDs5IenfJn80O0HznguPUp96FFmrH+quET1ts0Q==",
   "success": true,
-  "projectFilePath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj",
+  "projectFilePath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj",
   "expectedPackageFiles": [
     "/home/novahaus/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/home/novahaus/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
