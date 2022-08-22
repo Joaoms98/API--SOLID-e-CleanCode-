@@ -13,7 +13,7 @@ string mySqlConnection =
 
 builder.Services.AddDbContextPool<DbBaseContext>(opt =>
                 opt.UseMySql(mySqlConnection,
-                      ServerVersion.AutoDetect(mySqlConnection)));
+                        ServerVersion.AutoDetect(mySqlConnection)));
 
 
 builder.Services.AddControllers();
