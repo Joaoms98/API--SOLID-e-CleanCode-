@@ -10,4 +10,4 @@ namespace APIEstudos.Infrastructure
         }
         public DbSet<UserModel> Users { get; set; }
     }
-}
+}   

@@ -8,19 +8,20 @@ using APIEstudos.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+string mySqlConnection =
+              builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<DbBaseContext>
-    (opt => opt.UseSqlServer
-         ("Data Source=localhost;Initial Catalog=APITESTE66;Integrated Security=True"));
+builder.Services.AddDbContextPool<DbBaseContext>(opt =>
+                opt.UseMySql(mySqlConnection,
+                      ServerVersion.AutoDetect(mySqlConnection)));
 
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddAutoMapper(typeof(DomainProfileCore));
-
 builder.Services.AddScoped<IUserCommand, CreateUserHandler>();
 builder.Services.AddScoped<IUserService, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
 

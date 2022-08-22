@@ -22,3 +22,5 @@
 /home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.dll
 /home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/ref/APIEstudos.Infrastructure.dll
 /home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.pdb
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/bin/Debug/net6.0/APIEstudos.Infrastructure.runtimeconfig.json
+/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/Debug/net6.0/APIEstudos.Infrastructure.genruntimeconfig.cache
