@@ -5,6 +5,8 @@ namespace APIEstudos.Domain.Interfaces
         Task Add(T entity);
         Task Delete(T entity);
         Task Update(T entity);
+
+        
         Task <T> FindById (Guid id);
     }
 }

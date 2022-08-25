@@ -3,9 +3,9 @@ using APIEstudos.Infrastructure.Models;
 
 namespace APIEstudos.Domain.Interfaces
 {
-    public interface IUserService
+    public interface IUserServices
     {
-        Task<CreateUserResponse> CreateUserAsync(UserModel user);
+        Task<UserResponse> Add(UserModel user);
+        Task<UserResponse> FindById(Guid Id);
     }
 }
-    

@@ -1,6 +1,6 @@
 ﻿namespace APIEstudos.Domain.Responses
 {
-    public class CreateUserResponse
+    public class UserResponse
     {
         public Guid Id { get; set; }
         public string? Name { get; set; }
