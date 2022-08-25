@@ -1,5 +1,6 @@
 ﻿using APIEstudos.Infrastructure;
 using APIEstudos.Infrastructure.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace APIEstudos.Domain.Interfaces.Implements
 {
@@ -28,9 +29,10 @@ namespace APIEstudos.Domain.Interfaces.Implements
             throw new NotImplementedException();
         }
 
-        public Task<UserModel> FindById(Guid id)
+        public async Task<UserModel> FindById(Guid id)
         {
-            throw new NotImplementedException();
+            return await _context.Users
+                    .FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public Task Update(UserModel entity)

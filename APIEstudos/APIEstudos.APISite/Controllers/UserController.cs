@@ -9,10 +9,11 @@ namespace APIEstudos.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserCommand _user;
-
-        public UserController(IUserCommand user)
+        private readonly IUserServices _service;
+        public UserController(IUserCommand user, IUserServices service)
         {
             _user = user;
+            _service = service;
         }
 
         [HttpPost("/CreateUser")]
@@ -26,6 +27,20 @@ namespace APIEstudos.Controllers
             catch
             {
                 return BadRequest();
+            }
+        }
+
+        [HttpGet("id/{Id}")]
+        public async Task<ActionResult> FindUserById([FromRoute] Guid Id)
+        {
+            try
+            {
+                var response = await _service.FindById(Id);
+                return Ok(response);
+            }
+            catch
+            {
+                return NotFound();
             }
         }
     }

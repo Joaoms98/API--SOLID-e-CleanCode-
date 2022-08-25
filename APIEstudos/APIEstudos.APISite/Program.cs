@@ -19,8 +19,8 @@ builder.Services.AddDbContextPool<DbBaseContext>(opt =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAutoMapper(typeof(DomainProfileCore));
-builder.Services.AddScoped<IUserCommand, CreateUserHandler>();
-builder.Services.AddScoped<IUserService, UserServices>();
+builder.Services.AddScoped<IUserCommand, UserHandler>();
+builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddSwaggerGen();
 
