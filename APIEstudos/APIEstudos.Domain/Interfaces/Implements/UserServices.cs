@@ -18,7 +18,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
         public async Task<CreateUserResponse> CreateUserAsync(UserModel user)
         {
             var response = _mapper.Map<CreateUserResponse>(user);
-            await _userRepository.CreateUserAsync(user);
+            await _userRepository.Add(user);
             return response;
         }
     }

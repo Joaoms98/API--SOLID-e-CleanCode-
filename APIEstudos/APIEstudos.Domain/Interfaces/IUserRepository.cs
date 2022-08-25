@@ -2,8 +2,7 @@
 
 namespace APIEstudos.Domain.Interfaces
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<UserModel>
     {
-        Task CreateUserAsync(UserModel user);
     }
 }

@@ -12,15 +12,30 @@ namespace APIEstudos.Domain.Interfaces.Implements
             _context = context;
         }
 
-        public async Task CreateUserAsync(UserModel user)
+        public async Task Add(UserModel entity)
         {
-            await _context.Users.AddAsync(new UserModel
+             await _context.Users.AddAsync(new UserModel
             {
-                Name = user.Name,
-                Email = user.Email,
-                Date = user.Date
+                Name = entity.Name,
+                Email = entity.Email,
+                Date = entity.Date
             });
             await _context.SaveChangesAsync();
+        }
+
+        public Task Delete(UserModel entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<UserModel> FindById(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Update(UserModel entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
