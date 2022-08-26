@@ -6,6 +6,8 @@ namespace APIEstudos.Domain.Interfaces
     public interface IUserServices
     {
         Task<UserResponse> Add(UserModel user);
-        Task<UserResponse> FindById(Guid Id);
+        Task<UserResponse> Update(UserModel user);
+        Task Delete(Guid id);
+        Task<UserResponse> FindById(Guid id);
     }
 }

@@ -24,20 +24,25 @@ namespace APIEstudos.Domain.Interfaces.Implements
             await _context.SaveChangesAsync();
         }
 
-        public Task Delete(UserModel entity)
+        public async Task Update(UserModel entity)
         {
-            throw new NotImplementedException();
+            var User = await FindById(entity.Id);
+            User.Name = entity.Email;
+            User.Email = entity.Email;
+            _context.Users.Update(User);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Delete(Guid id)
+        {
+            _context.Remove(await FindById(id));
+            await _context.SaveChangesAsync();
         }
 
         public async Task<UserModel> FindById(Guid id)
         {
             return await _context.Users
                     .FirstOrDefaultAsync(u => u.Id == id);
-        }
-
-        public Task Update(UserModel entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

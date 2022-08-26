@@ -30,6 +30,21 @@ namespace APIEstudos.Controllers
             }
         }
 
+        [HttpPost("/UpdateUser")]
+        public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
+        {
+            try
+            {
+                var response = await _user.UpdateUserAsync(request);
+                return Ok(response);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+            //return test swagger "BadRequest" 
+        }
+
         [HttpGet("id/{Id}")]
         public async Task<ActionResult> FindUserById([FromRoute] Guid Id)
         {

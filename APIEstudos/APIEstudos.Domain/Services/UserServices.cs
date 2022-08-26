@@ -22,6 +22,18 @@ namespace APIEstudos.Domain.Interfaces.Implements
             return response;
         }
 
+        public async Task<UserResponse> Update(UserModel user)
+        {
+            var response = _mapper.Map<UserResponse>(user);
+            await _userRepository.Update(user);
+            return response;
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await _userRepository.Delete(id);
+        }
+
         public async Task<UserResponse> FindById(Guid id)
         {
             var response = _mapper.Map<UserResponse>(await _userRepository.FindById(id));
