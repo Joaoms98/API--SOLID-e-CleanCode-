@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace APIEstudos.Infrastructure.Models
+namespace APIEstudos.Core.Models
 {
     [Table("UserModel")]
     public class UserModel

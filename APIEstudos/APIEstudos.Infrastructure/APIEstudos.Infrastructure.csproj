@@ -19,5 +19,10 @@
     </PackageReference>
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APIEstudos.Core\APIEstudos.Core.csproj" />
+    <ProjectReference Include="..\APIEstudos.Domain\APIEstudos.Domain.csproj" />
+  </ItemGroup>
 	
 </Project>

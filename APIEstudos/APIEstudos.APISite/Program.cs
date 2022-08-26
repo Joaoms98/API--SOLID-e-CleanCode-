@@ -2,9 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using APIEstudos.Domain.Interfaces;
 using APIEstudos.Domain.Automapper;
 using APIEstudos.Domain.Handlers.Command;
-using APIEstudos.Domain.Interfaces.Implements;
 using APIEstudos.Infrastructure;
-
+using APIEstudos.Domain.Interfaces.Implements;
 
 var builder = WebApplication.CreateBuilder(args);
 

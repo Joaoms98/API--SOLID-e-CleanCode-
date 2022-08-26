@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using APIEstudos.Infrastructure.Models;
+﻿using APIEstudos.Core.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace APIEstudos.Infrastructure
 {
