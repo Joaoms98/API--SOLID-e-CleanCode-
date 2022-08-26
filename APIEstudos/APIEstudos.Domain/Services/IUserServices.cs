@@ -1,5 +1,5 @@
-﻿using APIEstudos.Domain.Responses;
-using APIEstudos.Infrastructure.Models;
+﻿using APIEstudos.Core.Models;
+using APIEstudos.Domain.Responses;
 
 namespace APIEstudos.Domain.Interfaces
 {

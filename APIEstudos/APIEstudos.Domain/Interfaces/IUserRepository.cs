@@ -1,4 +1,4 @@
-﻿using APIEstudos.Infrastructure.Models;
+﻿using APIEstudos.Core.Models;
 
 namespace APIEstudos.Domain.Interfaces
 {

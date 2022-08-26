@@ -1,5 +1,5 @@
-﻿using APIEstudos.Infrastructure;
-using APIEstudos.Infrastructure.Models;
+﻿using APIEstudos.Core.Models;
+using APIEstudos.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIEstudos.Domain.Interfaces.Implements

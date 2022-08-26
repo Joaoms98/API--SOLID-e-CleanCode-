@@ -1,5 +1,5 @@
-﻿using APIEstudos.Domain.Responses;
-using APIEstudos.Infrastructure.Models;
+﻿using APIEstudos.Core.Models;
+using APIEstudos.Domain.Responses;
 using AutoMapper;
 
 namespace APIEstudos.Domain.Interfaces.Implements

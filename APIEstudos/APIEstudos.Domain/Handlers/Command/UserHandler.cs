@@ -2,7 +2,7 @@
 using APIEstudos.Domain.Interfaces;
 using APIEstudos.Domain.Commands;
 using APIEstudos.Domain.Responses;
-using APIEstudos.Infrastructure.Models;
+using APIEstudos.Core.Models;
 
 namespace APIEstudos.Domain.Handlers.Command
 {
