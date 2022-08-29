@@ -19,7 +19,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
             {
                 Name = entity.Name,
                 Email = entity.Email,
-                Date = entity.Date
+                Date = DateTime.Now
             });
             await _context.SaveChangesAsync();
         }
