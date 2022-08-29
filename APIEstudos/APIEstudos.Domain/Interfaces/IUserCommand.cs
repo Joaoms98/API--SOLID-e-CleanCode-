@@ -6,5 +6,6 @@ namespace APIEstudos.Domain.Interfaces
     public interface IUserCommand
     {
         Task<UserResponse> CreateUserAsync(CreateUserRequest User);
+        Task<UserResponse> UpdateUserAsync(UpdateUserRequest User);
     }
 }

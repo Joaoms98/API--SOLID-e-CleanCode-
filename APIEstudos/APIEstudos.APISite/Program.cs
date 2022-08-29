@@ -4,6 +4,7 @@ using APIEstudos.Domain.Automapper;
 using APIEstudos.Domain.Handlers.Command;
 using APIEstudos.Infrastructure;
 using APIEstudos.Domain.Interfaces.Implements;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
