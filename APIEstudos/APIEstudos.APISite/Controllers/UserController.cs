@@ -58,7 +58,7 @@ namespace APIEstudos.Controllers
             }
         }
 
-        [HttpPost("/UpdateUser")]
+        [HttpPut("/UpdateUser")]
         public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
         {
             try
@@ -73,7 +73,7 @@ namespace APIEstudos.Controllers
             //return test swagger "BadRequest" 
         }
 
-        [HttpGet("/DeleteUser/{Id}")]
+        [HttpDelete("/DeleteUser/{Id}")]
         public async Task<ActionResult> DeleteUser([FromRoute] Guid Id)
         {
             try
