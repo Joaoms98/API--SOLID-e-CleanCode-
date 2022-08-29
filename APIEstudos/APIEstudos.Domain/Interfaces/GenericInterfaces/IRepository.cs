@@ -8,5 +8,6 @@ namespace APIEstudos.Domain.Interfaces
 
         
         Task <T> FindById (Guid id);
+        Task <IEnumerable<T>> GetAll();
     }
 }

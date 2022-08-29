@@ -39,5 +39,11 @@ namespace APIEstudos.Domain.Interfaces.Implements
             var response = _mapper.Map<UserResponse>(await _userRepository.FindById(id));
             return response;
         }
+
+        public async Task<IEnumerable<UserModel>> GetAll()
+        {
+            var user = await _userRepository.GetAll();
+            return(user);
+        }
     }
 }

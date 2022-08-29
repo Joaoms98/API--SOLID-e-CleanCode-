@@ -16,6 +16,34 @@ namespace APIEstudos.Controllers
             _service = service;
         }
 
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+            try
+            {
+                var users = await _service.GetAll();
+                return Ok(users);
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet("{Id}")]
+        public async Task<ActionResult> FindUserById([FromRoute] Guid Id)
+        {
+            try
+            {
+                var response = await _service.FindById(Id);
+                return Ok(response);
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
         [HttpPost("/CreateUser")]
         public async Task<ActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
@@ -45,17 +73,17 @@ namespace APIEstudos.Controllers
             //return test swagger "BadRequest" 
         }
 
-        [HttpGet("id/{Id}")]
-        public async Task<ActionResult> FindUserById([FromRoute] Guid Id)
+        [HttpGet("/DeleteUser/{Id}")]
+        public async Task<ActionResult> DeleteUser([FromRoute] Guid Id)
         {
             try
             {
-                var response = await _service.FindById(Id);
-                return Ok(response);
+                await _service.Delete(Id);
+                return Ok();
             }
             catch
             {
-                return NotFound();
+                return BadRequest();
             }
         }
     }

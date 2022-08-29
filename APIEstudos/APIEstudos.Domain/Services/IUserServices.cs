@@ -8,6 +8,8 @@ namespace APIEstudos.Domain.Interfaces
         Task<UserResponse> Add(UserModel user);
         Task<UserResponse> Update(UserModel user);
         Task Delete(Guid id);
+
         Task<UserResponse> FindById(Guid id);
+        Task<IEnumerable<UserModel>> GetAll();
     }
 }
