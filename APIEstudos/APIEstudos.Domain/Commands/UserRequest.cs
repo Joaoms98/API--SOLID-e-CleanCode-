@@ -16,4 +16,9 @@ namespace APIEstudos.Domain.Commands
         public string? Name { get; set; }
         public string? Email { get; set; }
     }
+
+    public class DeleteUserRequest : IRequest<UserResponse>
+    {
+        public Guid Id { get; set; }
+    }
 }

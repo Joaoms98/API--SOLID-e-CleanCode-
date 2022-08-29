@@ -31,5 +31,11 @@ namespace APIEstudos.Domain.Handlers.Command
             var response = _mapper.Map<UserModel>(request);
             return await _userServices.Update(response);
         }
+
+        public async Task DeleteUserAsync(DeleteUserRequest request)
+        {
+             var response = _mapper.Map<UserModel>(request);
+             await _userServices.Delete(response.Id);
+        }
     }
 }

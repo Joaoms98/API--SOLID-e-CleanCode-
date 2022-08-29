@@ -7,5 +7,7 @@ namespace APIEstudos.Domain.Interfaces
     {
         Task<UserResponse> CreateUserAsync(CreateUserRequest User);
         Task<UserResponse> UpdateUserAsync(UpdateUserRequest User);
+        
+        Task DeleteUserAsync(DeleteUserRequest User);
     }
 }

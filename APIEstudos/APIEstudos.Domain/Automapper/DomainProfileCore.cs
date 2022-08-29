@@ -15,6 +15,8 @@ namespace APIEstudos.Domain.Automapper
         private void ClienteMap()
         {
             CreateMap<CreateUserRequest, UserModel>();
+            CreateMap<UpdateUserRequest, UserModel>();
+            CreateMap<DeleteUserRequest, UserModel>();
             CreateMap<UserModel, UserResponse>();
         }
     }

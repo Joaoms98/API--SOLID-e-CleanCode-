@@ -74,11 +74,11 @@ namespace APIEstudos.Controllers
         }
 
         [HttpDelete("/DeleteUser/{Id}")]
-        public async Task<ActionResult> DeleteUser([FromRoute] Guid Id)
+        public async Task<ActionResult> DeleteUser([FromRoute] DeleteUserRequest request)
         {
             try
             {
-                await _service.Delete(Id);
+                await _user.DeleteUserAsync(request);
                 return Ok();
             }
             catch
