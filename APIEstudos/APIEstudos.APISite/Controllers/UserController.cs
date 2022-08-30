@@ -70,7 +70,6 @@ namespace APIEstudos.Controllers
             {
                 return BadRequest();
             }
-            //return test swagger "BadRequest" 
         }
 
         [HttpDelete("/DeleteUser/{Id}")]
