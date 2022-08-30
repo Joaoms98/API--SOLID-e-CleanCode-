@@ -31,18 +31,37 @@ namespace APIEstudos.Domain.Interfaces.Implements
 
         public async Task Delete(Guid id)
         {
+            var exists = await _userRepository.FindById(id);
+            
+            if (exists == null)
+            {
+                throw new InvalidOperationException("Couldn't find the user with the specified id");
+            }
+
             await _userRepository.Delete(id);
         }
 
         public async Task<UserResponse> FindById(Guid id)
         {
             var response = _mapper.Map<UserResponse>(await _userRepository.FindById(id));
+            
+            if(response == null)
+            {
+                throw new InvalidOperationException("Couldn't find the user with the specified  id");
+            }
+
             return response;
         }
 
         public async Task<IEnumerable<UserModel>> GetAll()
         {
             var user = await _userRepository.GetAll();
+            
+            if(user == null)
+            {
+                throw new InvalidOperationException("Couldn't find the users");
+            }
+
             return(user);
         }
     }
