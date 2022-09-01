@@ -26,7 +26,7 @@ namespace APIEstudos.Controllers
             }
             catch
             {
-                return NotFound();
+                return NotFound("Couldn't find the users");
             }
         }
 
@@ -40,7 +40,7 @@ namespace APIEstudos.Controllers
             }
             catch
             {
-                return NotFound();
+                return NotFound("Couldn't find the user with the specified  id");
             }
         }
 
@@ -54,7 +54,7 @@ namespace APIEstudos.Controllers
             }
             catch
             {
-                return NotFound();
+                return NotFound("Couldn't find the user with the specified email");
             }
         }
 
