@@ -26,7 +26,7 @@ namespace APIEstudos.Domain.Handlers.Command
             return await _userServices.Add(response);
         }
 
-        public async Task <UserResponse> UpdateUserAsync(UpdateUserRequest request)
+        public async Task<UserResponse> UpdateUserAsync(UpdateUserRequest request)
         {
             var response = _mapper.Map<UserModel>(request);
             return await _userServices.Update(response);
