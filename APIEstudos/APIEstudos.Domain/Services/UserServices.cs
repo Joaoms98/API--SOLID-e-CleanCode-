@@ -64,5 +64,17 @@ namespace APIEstudos.Domain.Interfaces.Implements
 
             return(user);
         }
+
+        public async Task<UserResponse> FindByEmail(string email)
+        {
+            var response = _mapper.Map<UserResponse>(await _userRepository.FindByEmail(email));
+            
+            if(response == null)
+            {
+                throw new InvalidOperationException("Couldn't find the user with the specified  Email");
+            }
+
+            return response;
+        }
     }
 }

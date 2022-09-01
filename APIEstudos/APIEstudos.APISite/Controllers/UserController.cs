@@ -30,12 +30,26 @@ namespace APIEstudos.Controllers
             }
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("Id")]
         public async Task<ActionResult> FindUserById([FromRoute] Guid Id)
         {
             try
             {
                 var response = await _service.FindById(Id);
+                return Ok(response);
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet("Email")]
+        public async Task<ActionResult> FindUserByEmail([FromRoute] string Email)
+        {
+            try
+            {
+                var response = await _service.FindByEmail(Email);
                 return Ok(response);
             }
             catch
@@ -50,7 +64,7 @@ namespace APIEstudos.Controllers
             try
             {
                 var response = await _user.CreateUserAsync(request);
-                return Ok(response);
+                return Ok();
             }
             catch
             {
@@ -64,7 +78,7 @@ namespace APIEstudos.Controllers
             try
             {
                 var response = await _user.UpdateUserAsync(request);
-                return Ok(response);
+                return Ok();
             }
             catch
             {
