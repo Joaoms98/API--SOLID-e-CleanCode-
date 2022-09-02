@@ -9,7 +9,10 @@ namespace APIEstudos.Domain.Interfaces.Implements
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
 
-        public UserServices(IUserRepository userRepository, IMapper mapper)
+        public UserServices(
+            IUserRepository userRepository,
+            IMapper mapper
+            )
         {
             _userRepository = userRepository;
             _mapper = mapper;
@@ -57,6 +60,13 @@ namespace APIEstudos.Domain.Interfaces.Implements
         {
             var response = _mapper.Map<UserResponse>(await _userRepository.FindByEmail(email));
             return response;
+        }
+
+        public async Task CreateUserNotDuplicate(string email)
+        {
+            var exists = await _userRepository.FindByEmail(email);
+            if (exists != null)
+                throw new Exception("This email already exists");
         }
     }
 }

@@ -6820,11 +6820,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
+      "projectUniqueName": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
       "projectName": "APIEstudos.Infrastructure",
-      "projectPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
+      "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
       "packagesPath": "/home/novahaus/.nuget/packages/",
-      "outputPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/",
+      "outputPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/novahaus/.nuget/NuGet/NuGet.Config"
@@ -6839,11 +6839,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Core/APIEstudos.Core.csproj": {
-              "projectPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Core/APIEstudos.Core.csproj"
+            "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Core/APIEstudos.Core.csproj": {
+              "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Core/APIEstudos.Core.csproj"
             },
-            "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj": {
-              "projectPath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj"
+            "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj": {
+              "projectPath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Domain/APIEstudos.Domain.csproj"
             }
           }
         }

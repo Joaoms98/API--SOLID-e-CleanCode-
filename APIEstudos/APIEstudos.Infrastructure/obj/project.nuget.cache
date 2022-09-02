@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YjWz2+CopDDELDFQxlSqV6yZkKQT+xQfom0NNnySoOwWsbozgIngEkGIlIrGJG0hSwPR2TMjduG8Gytsm5w24g==",
+  "dgSpecHash": "ALC+DiTdVPTnFQrIIzqYTAuitREDNjCzjfSxyApM9zi5IZ9K2oAUhuSJYZ+uVX/zl30m2VqC55l8PQWxX+aEBw==",
   "success": true,
-  "projectFilePath": "/home/novahaus/Desktop/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
+  "projectFilePath": "/home/novahaus/Sources/API-SOLID-CleanCode/APIEstudos/APIEstudos.Infrastructure/APIEstudos.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/novahaus/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/home/novahaus/.nuget/packages/bouncycastle.netcore/1.8.3/bouncycastle.netcore.1.8.3.nupkg.sha512",

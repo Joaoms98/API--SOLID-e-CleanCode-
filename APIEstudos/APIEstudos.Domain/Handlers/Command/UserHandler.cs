@@ -22,6 +22,7 @@ namespace APIEstudos.Domain.Handlers.Command
 
         public async Task<UserResponse> CreateUserAsync(CreateUserRequest request)
         {
+            await _userServices.CreateUserNotDuplicate(request.Email);
             var response = _mapper.Map<UserModel>(request);
             return await _userServices.Add(response);
         }
