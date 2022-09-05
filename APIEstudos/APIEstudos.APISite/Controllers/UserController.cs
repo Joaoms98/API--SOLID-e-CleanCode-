@@ -30,18 +30,25 @@ namespace APIEstudos.Controllers
             }
         }
 
-        [HttpGet("{Id}")]
-        public async Task<ActionResult> FindUserById([FromRoute] Guid Id)
+        [HttpGet("Id/{id}")]
+        public async Task<ActionResult> FindUserById([FromRoute] Guid id)
         {
             try
             {
-                var response = await _service.FindById(Id);
+                var response = await _service.FindById(id);
                 return Ok(response);
             }
             catch
             {
                 return NotFound();
             }
+        }
+
+        [HttpGet("Email/{email}")]
+        public async Task<ActionResult> FindUserByEmail([FromRoute] string email)
+        {
+            var response = await _service.FindByEmail(email);
+            return Ok(response);
         }
 
         [HttpPost("/CreateUser")]
