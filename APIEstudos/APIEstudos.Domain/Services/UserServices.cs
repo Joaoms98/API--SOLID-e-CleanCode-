@@ -17,13 +17,27 @@ namespace APIEstudos.Domain.Interfaces.Implements
 
         public async Task<UserResponse> Add(UserModel user)
         {
+            var exists = await _userRepository.FindByEmail(user.Email);
+            
+            if (exists !=   null)
+            {
+                throw new Exception("Email already exists.");
+            }
+            
             var response = _mapper.Map<UserResponse>(user);
             await _userRepository.Add(user);
             return response;
         }
-
+ 
         public async Task<UserResponse> Update(UserModel user)
         {
+            var exists = await _userRepository.FindById(user.Id);
+            
+            if (exists == null)
+            {
+                throw new Exception("Couldn't find the user with the specified id");
+            }
+
             var response = _mapper.Map<UserResponse>(user);
             await _userRepository.Update(user);
             return response;
@@ -35,7 +49,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
             
             if (exists == null)
             {
-                throw new InvalidOperationException("Couldn't find the user with the specified id");
+                throw new Exception("Couldn't find the user with the specified id");
             }
 
             await _userRepository.Delete(id);
@@ -47,7 +61,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
             
             if(response == null)
             {
-                throw new InvalidOperationException("Couldn't find the user with the specified  id");
+                throw new Exception("Couldn't find the user with the specified  id");
             }
 
             return response;
@@ -59,7 +73,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
             
             if(user == null)
             {
-                throw new InvalidOperationException("Couldn't find the users");
+                throw new Exception("Couldn't find the users");
             }
 
             return user;
@@ -71,7 +85,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
 
            if (response == null)
            {
-                throw new InvalidOperationException("Couldn't find the user with the specified email");
+                throw new Exception("Couldn't find the user with the specified email");
            }
 
             return response;
