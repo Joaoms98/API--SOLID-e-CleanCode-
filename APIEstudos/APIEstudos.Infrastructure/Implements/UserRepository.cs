@@ -50,5 +50,11 @@ namespace APIEstudos.Domain.Interfaces.Implements
             return await _context.Users
                 .ToListAsync();
         }
+
+        public async Task<UserModel> FindByEmail(string email)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == email);
+        }
     }
 }

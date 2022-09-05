@@ -11,5 +11,6 @@ namespace APIEstudos.Domain.Interfaces
 
         Task<UserResponse> FindById(Guid id);
         Task<IEnumerable<UserModel>> GetAll();
+        Task <UserResponse> FindByEmail(string email);
     }
 }
