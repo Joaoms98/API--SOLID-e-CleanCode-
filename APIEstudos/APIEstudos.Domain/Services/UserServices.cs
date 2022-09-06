@@ -90,5 +90,17 @@ namespace APIEstudos.Domain.Interfaces.Implements
 
             return response;
         }
+
+        public async Task<UserResponse> FindByName(string name)
+        {
+            var response = _mapper.Map<UserResponse> (await _userRepository.FindByName(name));
+
+           if (response == null)
+           {
+                throw new Exception("Couldn't find the user with the specified name");
+           }
+
+            return response;
+        }
     }
 }

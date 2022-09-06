@@ -19,29 +19,15 @@ namespace APIEstudos.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            try
-            {
-                var users = await _service.GetAll();
-                return Ok(users);
-            }
-            catch
-            {
-                return NotFound();
-            }
+            var users = await _service.GetAll();
+            return Ok(users);
         }
 
         [HttpGet("Id/{id}")]
         public async Task<ActionResult> FindUserById([FromRoute] Guid id)
         {
-            try
-            {
-                var response = await _service.FindById(id);
-                return Ok(response);
-            }
-            catch
-            {
-                return NotFound();
-            }
+            var response = await _service.FindById(id);
+            return Ok(response);
         }
 
         [HttpGet("Email/{email}")]
@@ -51,46 +37,32 @@ namespace APIEstudos.Controllers
             return Ok(response);
         }
 
+        [HttpGet("Name/{name}")]
+        public async Task<ActionResult> FindUserByName([FromRoute] string name)
+        {
+            var response = await _service.FindByName(name);
+            return Ok(response);
+        }
+
         [HttpPost("/CreateUser")]
         public async Task<ActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
-            try
-            {
-                var response = await _user.CreateUserAsync(request);
-                return Ok(response);
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            var response = await _user.CreateUserAsync(request);
+            return Ok(response);
         }
 
         [HttpPut("/UpdateUser")]
         public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
         {
-            try
-            {
-                var response = await _user.UpdateUserAsync(request);
-                return Ok(response);
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            var response = await _user.UpdateUserAsync(request);
+            return Ok(response);
         }
 
         [HttpDelete("/DeleteUser/{Id}")]
         public async Task<ActionResult> DeleteUser([FromRoute] DeleteUserRequest request)
         {
-            try
-            {
-                await _user.DeleteUserAsync(request);
-                return Ok();
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            await _user.DeleteUserAsync(request);
+            return Ok();
         }
     }
 }
