@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MediatR;
 using APIEstudos.Domain.Commands;
 using APIEstudos.Domain.Interfaces;
+using APIEstudos.Domain.Queries;
 
 namespace APIEstudos.Controllers
 {
@@ -10,24 +12,28 @@ namespace APIEstudos.Controllers
     {
         private readonly IUserCommand _user;
         private readonly IUserServices _service;
-        public UserController(IUserCommand user, IUserServices service)
+        private readonly IMediator _mediator;
+        public UserController(IUserCommand user, IUserServices service, IMediator mediator)
         {
             _user = user;
             _service = service;
+            _mediator = mediator;
         }
 
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var users = await _service.GetAll();
-            return Ok(users);
+            var query = new GetAllUsersQuery();
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
         [HttpGet("Id/{id}")]
         public async Task<ActionResult> FindUserById([FromRoute] Guid id)
         {
-            var response = await _service.FindById(id);
-            return Ok(response);
+            var query = new GetUserByIdQuery(id);
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
         [HttpGet("Email/{email}")]
