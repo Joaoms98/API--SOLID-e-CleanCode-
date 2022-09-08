@@ -15,7 +15,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
 
         public async Task Add(UserModel entity)
         {
-             await _context.Users.AddAsync(new UserModel
+            await _context.Users.AddAsync(new UserModel
             {
                 Name = entity.Name,
                 Email = entity.Email,
@@ -42,7 +42,7 @@ namespace APIEstudos.Domain.Interfaces.Implements
         public async Task<UserModel> FindById(Guid id)
         {
             return await _context.Users
-                    .FirstOrDefaultAsync(u => u.Id == id);
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<IEnumerable<UserModel>> GetAll()
@@ -55,6 +55,12 @@ namespace APIEstudos.Domain.Interfaces.Implements
         {
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task<UserModel> FindByName(string name)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Name == name);
         }
     }
 }

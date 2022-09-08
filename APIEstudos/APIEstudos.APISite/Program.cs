@@ -22,6 +22,7 @@ builder.Services.AddAutoMapper(typeof(DomainProfileCore));
 builder.Services.AddScoped<IUserCommand, UserHandler>();
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
 
 
