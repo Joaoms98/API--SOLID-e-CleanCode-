@@ -39,15 +39,17 @@ namespace APIEstudos.Controllers
         [HttpGet("Email/{email}")]
         public async Task<ActionResult> FindUserByEmail([FromRoute] string email)
         {
-            var response = await _service.FindByEmail(email);
-            return Ok(response);
+            var query = new GetUserByEmailQuery(email);
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
         [HttpGet("Name/{name}")]
         public async Task<ActionResult> FindUserByName([FromRoute] string name)
         {
-            var response = await _service.FindByName(name);
-            return Ok(response);
+            var query = new GetUserByNameQuery(name);
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
         [HttpPost("/CreateUser")]
