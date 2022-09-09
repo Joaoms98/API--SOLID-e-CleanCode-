@@ -3,6 +3,7 @@ using APIEstudos.Domain.Commands;
 using APIEstudos.Domain.Responses;
 using APIEstudos.Domain.Interfaces;
 using AutoMapper;
+using APIEstudos.Core.Models;
 
 namespace APIEstudos.Domain.Handlers.Command
 {
@@ -18,11 +19,17 @@ namespace APIEstudos.Domain.Handlers.Command
         }
         public async Task<UserResponse> Handle(UpdateUserRequest request, CancellationToken cancellationToken)
         {
-            var user = await _userRepository.FindById(request.Id);
+            UserModel user = await _userRepository.FindById(request.Id);
 
             if(user is null)
             {
                 throw new DllNotFoundException($"Could not find user by id: {request.Id}");
+            }
+
+            if(!string.IsNullOrEmpty(user.Email) && !string.IsNullOrEmpty(user.Name))
+            {
+                user.Name = request.Name;
+                user.Email = request.Email;
             }
 
             await _userRepository.Update(user);
