@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using APIEstudos.Domain.Commands;
-using APIEstudos.Domain.Interfaces;
 using APIEstudos.Domain.Queries;
 
 namespace APIEstudos.Controllers
@@ -10,13 +9,9 @@ namespace APIEstudos.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserCommand _user;
-        private readonly IUserServices _service;
         private readonly IMediator _mediator;
-        public UserController(IUserCommand user, IUserServices service, IMediator mediator)
+        public UserController(IMediator mediator)
         {
-            _user = user;
-            _service = service;
             _mediator = mediator;
         }
 
@@ -55,22 +50,24 @@ namespace APIEstudos.Controllers
         [HttpPost("/CreateUser")]
         public async Task<ActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
-            var response = await _user.CreateUserAsync(request);
-            return Ok(response);
+            var result = await _mediator.Send(request);
+            return Ok(result);
         }
 
         [HttpPut("/UpdateUser")]
         public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
         {
-            var response = await _user.UpdateUserAsync(request);
-            return Ok(response);
+            var result = await _mediator.Send(request);
+            return Ok(result);
+
+            //return entity not altered!! bug
         }
 
         [HttpDelete("/DeleteUser/{Id}")]
         public async Task<ActionResult> DeleteUser([FromRoute] DeleteUserRequest request)
         {
-            await _user.DeleteUserAsync(request);
-            return Ok();
+            var result = await _mediator.Send(request);
+            return Ok(result);
         }
     }
 }
