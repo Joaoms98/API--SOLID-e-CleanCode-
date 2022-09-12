@@ -26,11 +26,18 @@ namespace APIEstudos.Domain.Handlers.Command
                 throw new DllNotFoundException($"Could not find user by id: {request.Id}");
             }
 
-            if(!string.IsNullOrEmpty(user.Email) && !string.IsNullOrEmpty(user.Name))
+            if(string.IsNullOrEmpty(request.Email))
             {
-                user.Name = request.Name;
-                user.Email = request.Email;
+                throw new InvalidOperationException($"Email is Required");
             }
+
+            if(string.IsNullOrEmpty(request.Name))
+            {
+               throw new InvalidOperationException($"Name is Required"); 
+            }
+            
+            user.Name = request.Name;
+            user.Email = request.Email;
 
             await _userRepository.Update(user);
             return _mapper.Map<UserResponse>(user);

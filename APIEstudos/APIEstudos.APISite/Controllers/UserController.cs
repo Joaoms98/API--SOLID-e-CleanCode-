@@ -18,56 +18,103 @@ namespace APIEstudos.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var query = new GetAllUsersQuery();
-            var result = await _mediator.Send(query);
-            return Ok(result);
+            try
+            {
+                var query = new GetAllUsersQuery();
+                var result = await _mediator.Send(query);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpGet("Id/{id}")]
         public async Task<ActionResult> FindUserById([FromRoute] Guid id)
         {
-            var query = new GetUserByIdQuery(id);
-            var result = await _mediator.Send(query);
-            return Ok(result);
+            try
+            {
+                var query = new GetUserByIdQuery(id);
+                var result = await _mediator.Send(query);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpGet("Email/{email}")]
         public async Task<ActionResult> FindUserByEmail([FromRoute] string email)
         {
-            var query = new GetUserByEmailQuery(email);
-            var result = await _mediator.Send(query);
-            return Ok(result);
+            try
+            {
+                var query = new GetUserByEmailQuery(email);
+                var result = await _mediator.Send(query);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpGet("Name/{name}")]
         public async Task<ActionResult> FindUserByName([FromRoute] string name)
         {
-            var query = new GetUserByNameQuery(name);
-            var result = await _mediator.Send(query);
-            return Ok(result);
+            try
+            {
+                var query = new GetUserByNameQuery(name);
+                var result = await _mediator.Send(query);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return  NotFound(ex.Message);
+            }
         }
 
         [HttpPost("/CreateUser")]
         public async Task<ActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
-            var result = await _mediator.Send(request);
-            return Ok(result);
+            try
+            {
+                var result = await _mediator.Send(request);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("/UpdateUser")]
         public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
         {
-            var result = await _mediator.Send(request);
-            return Ok(result);
-
-            //return entity not altered!! bug
+            try
+            {
+                var result = await _mediator.Send(request);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete("/DeleteUser/{Id}")]
         public async Task<ActionResult> DeleteUser([FromRoute] DeleteUserRequest request)
         {
-            var result = await _mediator.Send(request);
-            return Ok(result);
+            try
+            {
+                var result = await _mediator.Send(request);
+                return Ok(result);
+            }
+            catch(Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }
