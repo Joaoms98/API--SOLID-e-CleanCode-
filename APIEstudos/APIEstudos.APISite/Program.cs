@@ -4,6 +4,8 @@ using APIEstudos.Domain.Interfaces;
 using APIEstudos.Domain.Automapper;
 using APIEstudos.Infrastructure;
 using APIEstudos.Domain.Interfaces.Implements;
+using APIEstudos.Domain.Services;
+using APIEstudos.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAutoMapper(typeof(DomainProfileCore));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserValidate, UserValidate>();
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
 

@@ -4,17 +4,20 @@ using APIEstudos.Domain.Responses;
 using APIEstudos.Domain.Interfaces;
 using AutoMapper;
 using APIEstudos.Core.Models;
+using APIEstudos.Domain.Services;
 
 namespace APIEstudos.Domain.Handlers.Command
 {
     public class UpdateUserHandler : IRequestHandler<UpdateUserRequest, UserResponse>
     {
         private readonly IUserRepository _userRepository;
+        private readonly IUserValidate _userValidate;
         private readonly IMapper _mapper;
 
-        public UpdateUserHandler(IUserRepository userRepository, IMapper mapper)
+        public UpdateUserHandler(IUserRepository userRepository, IUserValidate userValidate, IMapper mapper)
         {
             _userRepository = userRepository;
+            _userValidate = userValidate;
             _mapper = mapper;
         }
         public async Task<UserResponse> Handle(UpdateUserRequest request, CancellationToken cancellationToken)
@@ -23,24 +26,21 @@ namespace APIEstudos.Domain.Handlers.Command
 
             if(user is null)
             {
-                throw new DllNotFoundException($"Could not find user by id: {request.Id}");
-            }
-
-            if(string.IsNullOrEmpty(request.Email))
-            {
-                throw new InvalidOperationException($"Email is Required");
-            }
-
-            if(string.IsNullOrEmpty(request.Name))
-            {
-               throw new InvalidOperationException($"Name is Required"); 
+                throw new DllNotFoundException($"Could not find user id: {request.Id}");
             }
             
-            user.Name = request.Name;
-            user.Email = request.Email;
+            if(_userValidate.UserIsValid(request.Name, request.Email))
+            {
+                user.Name = request.Name;
+                user.Email = request.Email;
 
-            await _userRepository.Update(user);
-            return _mapper.Map<UserResponse>(user);
+                await _userRepository.Update(user);
+                return _mapper.Map<UserResponse>(user);
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }
