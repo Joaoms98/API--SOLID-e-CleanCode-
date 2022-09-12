@@ -26,6 +26,16 @@ namespace APIEstudos.Domain.Handlers.Command
                 throw new InvalidOperationException($"{request.Email} is already in use");
             }
             
+            if(string.IsNullOrEmpty(request.Email))
+            {
+                throw new InvalidOperationException($"Email is Required");
+            }
+
+            if(string.IsNullOrEmpty(request.Name))
+            {
+               throw new InvalidOperationException($"Name is Required"); 
+            }
+
             UserModel user = new UserModel {
                 Id = Guid.NewGuid(),
                 Name = request.Name,
