@@ -24,7 +24,7 @@ namespace APIEstudos.Domain.Handlers.Query
             
             if (user is null)
             {
-                throw new DllNotFoundException($"Could not find user with id {request.Email}");
+                throw new DllNotFoundException($"Could not find user with email {request.Email}");
             }
 
             return await Task.FromResult(
