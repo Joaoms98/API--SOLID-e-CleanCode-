@@ -12,19 +12,17 @@ namespace APIEstudos.Infrastructure.Services
         /// <returns>true or exception message</returns>
         public bool UserIsValid(string name, string email)
         {
-            if(email.Contains("@") && email.Contains(".com"))
-            {
-                if(!string.IsNullOrEmpty(name))
-                {
-                    return true;
-                }
-
-                throw new Exception("Name must not be empty.");
-            }
-            else
+            if(!email.Contains("@") && !email.Contains(".com"))
             {
                 throw new Exception("Invalid email address provided");
             }
+            
+            if(string.IsNullOrEmpty(name))
+            {
+                throw new Exception("Name must not be empty.");
+            }
+            
+            return true;
         }
     }
 }
