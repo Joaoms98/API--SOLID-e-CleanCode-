@@ -1,3 +1,4 @@
+using APIEstudos.Core.Exceptions;
 using APIEstudos.Domain.Services;
 
 namespace APIEstudos.Infrastructure.Services
@@ -14,12 +15,12 @@ namespace APIEstudos.Infrastructure.Services
         {
             if(!email.Contains("@") && !email.Contains(".com"))
             {
-                throw new Exception("Invalid email address provided");
+                throw new ValidationException("Invalid email address provided");
             }
             
             if(string.IsNullOrEmpty(name))
             {
-                throw new Exception("Name must not be empty.");
+                throw new ValidationException("Name must not be empty.");
             }
             
             return true;

@@ -8,8 +8,12 @@ namespace APIEstudos.Core.Models
     {
         [Key]
         public Guid Id { get; set; }
-        public string? Name { get; set; }
-        public string? Email { get; set; }
+        [Required]
+        [StringLength(30, ErrorMessage = "The length of the field must be 100 characters long.")]
+        public string Name { get; set; } = string.Empty;
+        [Required]
+        [StringLength(30, ErrorMessage = "The length of the field must be 100 characters long.")]
+        public string Email { get; set; } = string.Empty;
         public DateTime Date { get; set; }
     }
 }
