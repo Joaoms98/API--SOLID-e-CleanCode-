@@ -2,6 +2,7 @@ using MediatR;
 using AutoMapper;
 using APIEstudos.Domain.Commands;
 using APIEstudos.Domain.Interfaces;
+using APIEstudos.Core.Exceptions;
 
 namespace APIEstudos.Domain.Handlers.Command
 {
@@ -21,7 +22,7 @@ namespace APIEstudos.Domain.Handlers.Command
 
             if(user is null)
             {
-                throw new DllNotFoundException($"Could not find user by id: {request.Id}");
+                throw new UserExistsException($"Could not find user by id: {request.Id}");
             }
 
             await _userRepository.Delete(user.Id);

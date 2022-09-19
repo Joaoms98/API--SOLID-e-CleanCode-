@@ -5,6 +5,7 @@ using APIEstudos.Domain.Responses;
 using APIEstudos.Domain.Interfaces;
 using APIEstudos.Core.Models;
 using APIEstudos.Domain.Services;
+using APIEstudos.Core.Exceptions;
 
 namespace APIEstudos.Domain.Handlers.Command
 {
@@ -31,7 +32,7 @@ namespace APIEstudos.Domain.Handlers.Command
             
             if (emailAlreadyExists != null)
             {
-                throw new InvalidOperationException($"{request.Email} is already in use");
+                throw new UserExistsException($"{request.Email} is already in use");
             }
 
             if(_userValidate.UserIsValid(request.Name, request.Email))
@@ -48,7 +49,7 @@ namespace APIEstudos.Domain.Handlers.Command
             }
             else
             {
-                throw new InvalidOperationException();
+                throw new ValidationException();
             }
         }
     }

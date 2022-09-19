@@ -76,12 +76,13 @@ namespace APIEstudos.Controllers
         }
 
         [HttpPost("/CreateUser")]
+
         public async Task<ActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
             try
             {
                 var result = await _mediator.Send(request);
-                return Ok(result);
+                return Created("", result);
             }
             catch(Exception ex)
             {

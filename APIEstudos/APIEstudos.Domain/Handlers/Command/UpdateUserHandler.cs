@@ -1,10 +1,11 @@
 using MediatR;
+using AutoMapper;
 using APIEstudos.Domain.Commands;
 using APIEstudos.Domain.Responses;
 using APIEstudos.Domain.Interfaces;
-using AutoMapper;
 using APIEstudos.Core.Models;
 using APIEstudos.Domain.Services;
+using APIEstudos.Core.Exceptions;
 
 namespace APIEstudos.Domain.Handlers.Command
 {
@@ -26,7 +27,7 @@ namespace APIEstudos.Domain.Handlers.Command
 
             if(user is null)
             {
-                throw new DllNotFoundException($"Could not find user id: {request.Id}");
+                throw new UserExistsException($"Could not find user id: {request.Id}");
             }
             
             if(_userValidate.UserIsValid(request.Name, request.Email))
@@ -39,7 +40,7 @@ namespace APIEstudos.Domain.Handlers.Command
             }
             else
             {
-                throw new InvalidOperationException();
+                throw new ValidationException();
             }
         }
     }

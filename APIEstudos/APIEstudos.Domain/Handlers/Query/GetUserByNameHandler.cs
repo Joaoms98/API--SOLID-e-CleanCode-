@@ -4,6 +4,7 @@ using APIEstudos.Core.Models;
 using APIEstudos.Domain.Interfaces;
 using APIEstudos.Domain.Queries;
 using APIEstudos.Domain.Responses;
+using APIEstudos.Core.Exceptions;
 
 namespace APIEstudos.Domain.Handlers.Query
 {
@@ -24,7 +25,7 @@ namespace APIEstudos.Domain.Handlers.Query
 
             if (user is null)
             {
-                throw new DllNotFoundException($"User {request.Name} not found");
+                throw new UserExistsException($"User {request.Name} not found");
             }
 
             return await Task.FromResult(
